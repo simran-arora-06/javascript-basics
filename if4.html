@@ -13,26 +13,26 @@
     <input type="text" id="num3" placeholder="enter 3rd no">
     <button onclick="number()">SUBMIT</button>
     <script>
-    function number() {
-        const numb1 = document.getElementById("num1");
-        const numb2 = document.getElementById("num2");
-        const numb3 = document.getElementById("num3");
+        function number() {
+            const numb1 = document.getElementById("num1");
+            const numb2 = document.getElementById("num2");
+            const numb3 = document.getElementById("num3");
 
-        if (num1.value > num2.value) {
-            if (num1.value > num3.value) {
-                document.writeln("1st value is greater");
+            if (num1.value > num2.value) {
+                if (num1.value > num3.value) {
+                    document.writeln("1st value is greater");
+                } else {
+                    document.writeln("3rd value is greater");
+                }
             } else {
-                document.writeln("3rd value is greater");
-            }
-        } else {
-            if (num2.value > num3.value) {
-                document.writeln("2nd value is greater");
-            } else {
-                document.writeln("3rd value is greater");
+                if (num2.value > num3.value) {
+                    document.writeln("2nd value is greater");
+                } else {
+                    document.writeln("3rd value is greater");
+                }
             }
         }
-    }
-</script>
+    </script>
 </body>
 
 </html>

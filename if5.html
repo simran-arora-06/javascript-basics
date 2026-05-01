@@ -5,11 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <input type="text" id="gender" placeholder="enter the gender">
+<body> <!--wap to input sex and age, and check if it is eligible for marraige-->
+    <input type="text" id="gender" placeholder="enter the gender M/F/O">
+    <input type="text" id="age" placeholder="enter your age">
     <button onclick="get()">SUBMIT</button>
+    <h1 id="ans"></h1>
     <script>
-        
+        function get(){
+            let g = document.getElementById("gender");
+            let a = parseInt(document.getElementById("age").value);
+            if(gender.value === 'M'){
+                 if(a >= 21){
+                    document.getElementById("ans").innerHTML = "eligible";
+                 }
+                 else{
+                    document.getElementById("ans").innerHTML = "not eligible";
+                 }  
+            }
+            else if(gender.value === 'F') {
+                if(a >= 21){
+                    document.getElementById("ans").innerHTML = "eligible";
+                }
+                else{
+                    document.getElementById("ans").innerHTML = "not eligible";
+                }
+            }
+            else{
+                    document.getElementById("ans").innerHTML = "wrong sex choice";
+            }
+
+               
+        }
     </script>
 </body>
 </html>

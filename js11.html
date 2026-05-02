@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><!--wap to input a year and check if it is leap year orr not-->
+    <input type="text" id="year" placeholder="enter a year">
+    <button onclick="leap()">CHECK</button>
+    <h1 id="ans">Year is :</h1>
+    <script>
+        function leap(){
+            let y = parseInt(document.getElementById("year").value);
+            if(isNaN(y)){
+                document.getElementById("ans").innerHTML = "please enter valid number";
+            }
+            else if( (y % 400 === 0 && y % 100 !== 0) || (y % 4 === 0)){
+                document.getElementById("ans").innerHTML = "a Leap year";
+            }
+            else{
+                document.getElementById("ans").innerHTML = "not a Leap year";
+            }
+        }
+    </script>
+</body>
+</html>

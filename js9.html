@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body><!--wap to input salary and check if it high or low-->
     <input type="text" id="salary" placeholder="enter your salary">
     <button onclick="salary()">CHECK</button>
     <h1 id="ans">Salary is:</h1>
+    <script>
+        function salary() {
+            let s = parseFloat(document.getElementById("salary").value);
+            if (isNaN(s)) {
+                document.getElementById("ans").innerHTML = "Please enter valid number";
+            }
+            else if (s > 100000) {
+                document.getElementById("ans").innerHTML = "HIGH";
+            }
+            else if (s >= 50000) {
+                document.getElementById("ans").innerHTML = "MID";
+            }
+            else {
+                document.getElementById("ans").innerHTML = "LOW";
+            }
+        }
+    </script>
 </body>
+
 </html>

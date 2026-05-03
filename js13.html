@@ -11,9 +11,18 @@
     <h1 id="ans">Character is :</h1>
     <script>
         function checkchar(){
-            let c = document.getElementById("char");
-            if(isNaN(C)){
-                  document.getElementById("ans").innerHTML = "please enter valid number";
+            let c = document.getElementById("char").value;
+            if(c.length !== 1){
+                  document.getElementById("ans").innerHTML = "please enter only one character";
+            }
+            else if(c >= 'a' && c <= 'z'){
+                document.getElementById("ans").innerHTML = "lower case";
+            }
+            else if(c >= 'A' && c <= 'Z'){
+                document.getElementById("ans").innerHTML = "uppercase";
+            }
+            else {
+                document.getElementById("ans").innerHTML = "is a digit or special symbol";
             }
         }
     </script>

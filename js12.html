@@ -8,9 +8,26 @@
 <body><!--wap to input a value and check if it is single,double or triple digit-->
     <input type="text" id="num" placeholder="enter a value">
     <button onclick="number()">CHECK</button>
-    <h1 id="ans">digit is</h1>
+    <h1 id="ans">value is:</h1>
     <script>
-        
+        function number(){
+            let n = parseInt(document.getElementById("num").value);
+          if(isNaN(n)){
+             document.getElementById("ans").innerHTML = "please enter valid number";
+          }
+          else if(n >= 0 && n<=9){
+             document.getElementById("ans").innerHTML = "single digit";
+          }
+          else if(n <= 99){
+             document.getElementById("ans").innerHTML = "double digit";
+          }
+          else if (n <= 999){
+             document.getElementById("ans").innerHTML = "triple digit";
+          }
+          else{
+             document.getElementById("ans").innerHTML = "more than three digit";
+          }
+        }
     </script>
 </body>
 </html>

@@ -11,12 +11,33 @@
     <h1 style="text-align: center; color: cadetblue;">login</h1>
     <input type="text" id="username" placeholder="enter your username"
         style="text-align: center; margin-top: 10px; color: rgb(23, 91, 125);display:block; margin:0 auto;">
-        <br>
+    <br>
     <input type="text" id="password" placeholder="enter your password"
         style="text-align: center; margin-top: 3px; color: rgb(23, 91, 125);display:block; margin:0 auto;">
-        <br>
+    <br>
     <button onclick="login()"
         style="text-align: center;margin:8px ; background-color: cadetblue; color: black; display:block; margin:0 auto;">SUBMIT</button>
+       
+       
+       <script>
+            function login(){
+                let u = document.getElementById("username").value;
+                let p = document.getElementById("password").value;
+                let username = "sim" ;
+                let password = "7777" ;
+                if(u === username){
+                    if( p === password){
+                         alert("login sucessfully");
+                    }
+                    else{
+                         alert("password incorrect");
+                    }
+                }
+                else{
+                     alert("user not found");
+                }
+            }
+        </script>
 </body>
 
 </html>

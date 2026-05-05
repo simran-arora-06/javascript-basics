@@ -14,9 +14,29 @@
     <h3 id="ans">The no is :</h3>
     <script>
         function number(){
-            
+            let n = parseInt(document.getElementById("num").value);
+            if(isNaN(n)){
+                document.getElementById("ans").innerHTML = "please enter a valid number!!!";
+                return;
+            }
+            if( n % 2 === 0){
+                if( n % 5 === 0){
+                    document.getElementById("ans").innerHTML = "even & also divisible by 5";
+                }
+                else{
+                    document.getElementById("ans").innerHTML = "even but not divisible by 5";
+                }
+            }
+            else{
+                if(n % 5 === 0){
+                    document.getElementById("ans").innerHTML = "odd & divisible by 5";
+                }
+                else{
+                    document.getElementById("ans").innerHTML = "odd but not divisible by 5";
+                }
+            }
         }
     </script>
 </body>
-
+ 
 </html>
